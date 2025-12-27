@@ -31,3 +31,5 @@ If you want to enhance your portfolio, you can optionally add:
 The current design works perfectly without any images - it's a clean, professional text-based portfolio that matches the reference site's aesthetic.
 
 
+
+

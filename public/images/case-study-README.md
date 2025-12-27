@@ -28,3 +28,5 @@ For Project 2 (case-study/2):
 The case study pages will automatically display these images when you add them to this folder. The images are referenced in `src/pages/CaseStudy.jsx`.
 
 
+
+
