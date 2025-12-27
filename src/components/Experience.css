@@ -1,0 +1,200 @@
+/* Experience Section */
+.experience-section {
+  padding: 100px 40px;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-title {
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 80px;
+  letter-spacing: -2px;
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.experience-item.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -34px;
+  top: 24px;
+  bottom: -50px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -42px;
+  top: 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  z-index: 2;
+}
+
+.experience-content {
+  position: relative;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.experience-icon-wrapper {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.experience-icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.experience-company {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.experience-role {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  color: #fff;
+  margin: 8px 0 8px 0;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.experience-period {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.experience-responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-responsibilities li {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.experience-responsibilities li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 60px 24px;
+  }
+
+  .experience-title {
+    font-size: clamp(36px, 10vw, 64px);
+    margin-bottom: 50px;
+  }
+
+  .experience-timeline {
+    padding-left: 40px;
+    max-width: 100%;
+  }
+
+  .experience-item {
+    margin-bottom: 40px;
+  }
+
+  .experience-item:not(:last-child)::after {
+    left: -24px;
+  }
+
+  .timeline-marker {
+    width: 14px;
+    height: 14px;
+    left: -32px;
+  }
+
+  .experience-role {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .experience-responsibilities li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 50px 20px;
+  }
+
+  .experience-timeline {
+    padding-left: 32px;
+    max-width: 100%;
+  }
+
+  .experience-item:not(:last-child)::after {
+    left: -20px;
+  }
+
+  .timeline-marker {
+    width: 12px;
+    height: 12px;
+    left: -26px;
+  }
+}
+

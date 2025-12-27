@@ -1,0 +1,1014 @@
+.projects {
+  padding: 0;
+  background: transparent;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Crushed paper texture effect for black background */
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Fine paper grain texture */
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02) 0px,
+      transparent 0.5px,
+      transparent 1.5px,
+      rgba(255, 255, 255, 0.02) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0px,
+      transparent 0.5px,
+      transparent 1.5px,
+      rgba(255, 255, 255, 0.02) 2px
+    ),
+    /* Organic paper variations */
+    radial-gradient(ellipse at 25% 25%, rgba(255, 255, 255, 0.015) 0%, transparent 40%),
+    radial-gradient(ellipse at 75% 75%, rgba(255, 255, 255, 0.015) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.01) 0%, transparent 60%);
+  background-size: 
+    3px 3px,
+    3px 3px,
+    300px 300px,
+    280px 280px,
+    350px 350px;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.projects::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Paper fiber direction */
+    linear-gradient(
+      45deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.01) 50%,
+      transparent 60%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.01) 50%,
+      transparent 60%
+    ),
+    /* Subtle paper crinkle effect */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 98px,
+      rgba(255, 255, 255, 0.005) 99px,
+      rgba(255, 255, 255, 0.005) 100px
+    );
+  background-size: 
+    12px 12px,
+    10px 10px,
+    100px 100px;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.projects-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-section-title {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 0;
+  margin-top: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.project-card {
+  padding: 0;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.project-layout-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Project 1 - Light Blue Linear Background */
+.project-card-blue {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+}
+
+.project-card-blue .project-content-section {
+  background: transparent;
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.project-card-blue .project-mockups-section {
+  background: transparent;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+/* Project 1 - Dark text for blue sky background */
+.project-card-blue .project-number-text,
+.project-card-blue .project-title-text,
+.project-card-blue .project-info-title,
+.project-card-blue .project-info-link-text,
+.project-card-blue .project-description-text {
+  color: #1a1a1a;
+}
+
+.project-card-blue .project-info-link-text {
+  color: #1a1a1a;
+  opacity: 0.9;
+}
+
+/* Project 2 - Dark Linear Background */
+.project-card-purple {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%);
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+}
+
+.project-card-purple .project-content-section {
+  background: transparent;
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.project-card-purple .project-mockups-section {
+  background: transparent;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Black crushed paper floating GIF - Full width */
+.floating-paper-gif {
+  position: absolute;
+  top: 0;
+  left: calc(-50vw + 50%);
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+  overflow: hidden;
+}
+
+.paper-gif-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: floatPaper 20s ease-in-out infinite;
+}
+
+/* Project 1 - Blue: Different animation */
+.floating-paper-blue .paper-gif-image {
+  animation: floatPaper1 25s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Project 2 - Purple: Different animation */
+.floating-paper-purple .paper-gif-image {
+  animation: floatPaper2 30s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes floatPaper1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(20px, -30px) scale(1.1) rotate(5deg);
+  }
+  50% {
+    transform: translate(-15px, -50px) scale(0.95) rotate(-5deg);
+  }
+  75% {
+    transform: translate(25px, -20px) scale(1.05) rotate(3deg);
+  }
+}
+
+@keyframes floatPaper2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(-25px, -40px) scale(1.15) rotate(-8deg);
+  }
+  66% {
+    transform: translate(30px, -60px) scale(0.9) rotate(8deg);
+  }
+}
+
+@keyframes floatPaper {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(10px, -20px) scale(1.05);
+  }
+}
+
+/* Add space between boxes in Project 1 */
+.project-card-blue .project-layout-grid {
+  column-gap: 24px;
+}
+
+/* Add space between boxes in Project 2 */
+.project-card-purple .project-layout-grid {
+  column-gap: 24px;
+}
+
+.project-card:last-child {
+  border-bottom: none;
+}
+
+/* New Layout Styles */
+.project-content-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.project-number-large {
+  font-size: clamp(120px, 15vw, 200px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -2px;
+  flex-shrink: 0;
+  opacity: 0.9;
+  align-self: center;
+}
+
+.project-card-blue .project-number-large {
+  color: #ffffff;
+}
+
+.project-card-purple .project-number-large {
+  color: #ffffff;
+}
+
+.project-content-center {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+}
+
+.project-title-large {
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 0;
+  text-align: center;
+}
+
+.project-card-blue .project-title-large {
+  color: #ffffff;
+}
+
+.project-card-purple .project-title-large {
+  color: #ffffff;
+}
+
+.project-description-text {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+.project-card-blue .project-description-text {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.project-card-purple .project-description-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.project-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.project-button:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-mockups-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  justify-content: flex-start;
+  padding-top: 60px;
+}
+
+.project-case-study-link {
+  font-size: 16px;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.project-case-study-link:hover {
+  opacity: 0.7;
+}
+
+.project-card-purple .project-case-study-link {
+  color: #ffffff;
+}
+
+.project-phones-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.project-phone-mockup {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.project-phone-frame {
+  width: 240px;
+  padding-bottom: 216.67%; /* iPhone aspect ratio (9:19.5) */
+  position: relative;
+  background: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 8px solid #1a1a1a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-phone-frame:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4), 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-purple .project-phone-frame {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.project-card-purple .project-phone-frame:hover {
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.project-phone-1 .project-phone-frame {
+  width: 220px;
+  transform: rotate(5deg);
+}
+
+.project-phone-2 .project-phone-frame {
+  width: 240px;
+  transform: rotate(-5deg);
+}
+
+.project-phone-3 .project-phone-frame {
+  width: 240px;
+  transform: rotate(-5deg);
+}
+
+.project-phone-4 .project-phone-frame {
+  width: 220px;
+  transform: rotate(0deg);
+}
+
+.project-phone-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-phone-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .project-layout-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content-section {
+    padding: 80px 40px;
+  }
+
+  .project-mockups-section {
+    padding: 60px 40px;
+    align-items: center;
+  }
+
+  .project-phones-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-content-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 30px;
+  }
+
+  .project-number-large {
+    font-size: clamp(80px, 12vw, 150px);
+  }
+
+  .project-title-large {
+    font-size: clamp(36px, 8vw, 56px);
+  }
+
+  .project-phone-frame {
+    width: 160px;
+  }
+
+  .project-phones-container {
+    gap: 20px;
+  }
+}
+
+/* Project card hover handled by transform */
+
+.project-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.project-layout-grid {
+  display: grid;
+  grid-template-columns: 3.43% 12.42% 13.81% 28.27% 1% 2% 25% 7.68%;
+  grid-template-rows: minmax(147px, auto) minmax(10px, auto) minmax(15px, auto) minmax(12px, auto) minmax(28px, auto) minmax(43px, auto) minmax(37px, auto) minmax(58px, auto) minmax(430px, auto) minmax(50px, auto) minmax(126px, auto) minmax(6px, auto) 1fr;
+  gap: 0;
+  width: 100%;
+  min-height: 1050px;
+  position: relative;
+  padding: 0 40px;
+}
+
+/* Project 2 - closer columns */
+.project-layout-purple {
+  grid-template-columns: 7.68% 25% 6.54% 1% 28.27% 13.81% 12.42% 3.43%;
+}
+
+/* Flip Project 2 completely - reverse grid columns */
+.project-layout-purple {
+  grid-template-columns: 7.68% 25% 6.54% 2.86% 28.27% 13.81% 12.42% 3.43%;
+}
+
+.project-number {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -1px;
+  position: sticky;
+  top: 140px;
+}
+
+/* Large Box - Left Side for Project 1 */
+.project-box-large-container {
+  grid-column: 1 / 6;
+  grid-row: 2 / 13;
+  z-index: 1;
+  position: relative;
+}
+
+/* Small Box - Right Side for Project 1 */
+.project-box-small-container {
+  grid-column: 6 / 9;
+  grid-row: 7 / 10;
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Reverse for Project 2 - Flipped layout: Large box right, Small box left */
+.project-layout-purple .project-box-large-container {
+  grid-column: 4 / 9;
+  grid-row: 2 / 13;
+}
+
+/* Project 2 small box - left side (flipped) */
+.project-layout-purple .project-box-small-container {
+  grid-column: 1 / 4;
+  grid-row: 7 / 10;
+  width: 100%;
+  height: 100%;
+}
+
+.project-box-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.project-box {
+  width: 100%;
+  background: #f5f5f5;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.project-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.project-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.project-box:hover::before {
+  left: 100%;
+}
+
+/* Project 1 - Blue background */
+.project-card-blue .project-box {
+  background: #e3f2fd;
+}
+
+/* Project 2 - Blue background (different shade) */
+.project-card-purple .project-box {
+  background: #bbdefb;
+}
+
+.project-box-large {
+  width: 100%;
+  height: 100%;
+  min-height: 780px;
+  max-width: 744px;
+}
+
+.project-box-small {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  max-width: 400px;
+}
+
+/* Ensure Project 2 small box is same size as Project 1 */
+.project-layout-purple .project-box-small {
+  min-height: 520px;
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+}
+
+.project-box:hover {
+  opacity: 0.95;
+}
+
+.project-box-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+}
+
+.project-box-figma {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  border: none;
+  display: block;
+  background: #fff;
+  border-radius: 18px;
+}
+
+.project-box-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.box-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Text inside big box */
+.project-text-inside-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Project 1 - Text aligned left */
+.project-number-inside {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.project-title-inside {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.project-number-text {
+  font-size: clamp(80px, 10vw, 120px);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.91);
+  line-height: 1;
+  margin: 0;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.project-title-text {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.91);
+  line-height: 1.3;
+  margin: 0;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.project-number-inside a,
+.project-title-inside a {
+  text-decoration: none;
+}
+
+/* Reverse text position for Project 2 - aligned left (flipped layout) */
+.project-layout-purple .project-text-inside-box {
+  padding: 40px;
+  align-items: flex-start;
+}
+
+.project-layout-purple .project-number-inside {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.project-layout-purple .project-title-inside {
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: left;
+}
+
+/* Project Info - Right Side for Project 1 */
+.project-info-right {
+  grid-column: 6 / 8;
+  grid-row: 3 / 6;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Center text for Project 1 */
+.project-card-blue .project-info-right {
+  align-items: center;
+  text-align: center;
+}
+
+.project-card-blue .project-info-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card-blue .project-info-title {
+  text-align: center;
+}
+
+.project-card-blue .project-info-link-text {
+  text-align: center;
+}
+
+/* Project Info - Left Side for Project 2 (flipped) */
+.project-layout-purple .project-info-right {
+  grid-column: 1 / 3;
+  grid-row: 3 / 6;
+  align-items: flex-start;
+}
+
+.project-info-title {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+.project-info-link {
+  text-decoration: none;
+  width: 100%;
+}
+
+.project-info-link-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+.project-info-link-text u {
+  text-decoration: underline;
+}
+
+/* Project Description - Bottom Right for Project 1 */
+.project-description-bottom {
+  grid-column: 6 / 9;
+  grid-row: 11 / 12;
+  z-index: 6;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Center description text for Project 1 */
+.project-card-blue .project-description-bottom {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-card-blue .project-description-text {
+  text-align: center;
+}
+
+/* Project Description - Left Side for Project 2 (flipped) */
+.project-layout-purple .project-description-bottom {
+  grid-column: 1 / 4;
+  grid-row: 11 / 12;
+  justify-content: flex-start;
+}
+
+.project-description-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 100%;
+  text-decoration: none;
+  width: 100%;
+}
+
+.project-description-bottom a {
+  text-decoration: none;
+}
+
+.project-category {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.project-title {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.project-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 16px;
+  max-width: 700px;
+}
+
+.project-link {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.project-link:hover {
+  opacity: 0.6;
+}
+
+.project-link::after {
+  content: '→';
+}
+
+.project-link:hover::after {
+  transform: translateX(4px);
+}
+
+
+/* Ensure content is above floating papers */
+.project-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure project boxes are above paper GIF */
+.project-box-large-container,
+.project-box-small-container,
+.project-info-right,
+.project-description-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 80px 24px;
+  }
+
+  .projects-section-title {
+    font-size: clamp(36px, 10vw, 64px);
+    margin-bottom: 60px;
+  }
+
+  .project-card {
+    padding: 60px 0;
+  }
+
+  .project-card:hover {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .project-wrapper {
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+  }
+
+  .project-number {
+    font-size: 24px;
+    position: static;
+  }
+
+  .project-boxes-container {
+    grid-column: 1 / -1;
+    margin-bottom: 24px;
+  }
+
+  .project-boxes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-content {
+    grid-column: 1 / -1;
+  }
+
+  .project-title {
+    font-size: clamp(24px, 8vw, 40px);
+    margin-bottom: 12px;
+  }
+
+  .project-description {
+    font-size: 16px;
+  }
+
+  .project-category {
+    font-size: 12px;
+  }
+}

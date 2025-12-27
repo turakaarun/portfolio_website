@@ -1,0 +1,242 @@
+.skills {
+  padding: 0;
+  background: #fff;
+  min-height: auto;
+  transition: background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skills-logos-container {
+  width: 100%;
+  padding: 30px 40px 40px;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skills-logos-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.skills-logos-label {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  padding: 0 20px;
+}
+
+.skills-logos-scroll {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.skills-logos-track {
+  display: flex;
+  gap: 24px;
+  will-change: transform;
+  width: fit-content;
+}
+
+/* Design Tools - Left to Right */
+.skills-logos-track-left {
+  animation: scrollLeftToRight 25s linear infinite;
+}
+
+@keyframes scrollLeftToRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Technical Skills - Right to Left */
+.skills-logos-track-right {
+  animation: scrollRightToLeft 25s linear infinite;
+}
+
+@keyframes scrollRightToLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.skills-logo-item {
+  flex-shrink: 0;
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  height: 60px;
+}
+
+.skills-separator {
+  min-width: 20px;
+  padding: 0 20px;
+}
+
+.skills-separator-text {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0.6;
+}
+
+.skills-logo-image {
+  width: auto;
+  height: 50px;
+  max-width: 140px;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.skills-logo-item:hover .skills-logo-image {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.skills-logo-fallback {
+  font-size: clamp(12px, 1.5vw, 16px);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.skills-logo-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.skills-logo-item:hover {
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.skills-logo-item:hover::before {
+  left: 100%;
+}
+
+@media (max-width: 1024px) {
+  .skills-logos-container {
+    padding: 50px 30px 30px;
+    gap: 30px;
+  }
+
+  .skills-logos-section {
+    gap: 15px;
+  }
+
+  .skills-logos-track {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    min-height: auto;
+  }
+
+  .skills-logos-container {
+    padding: 40px 20px 30px;
+    gap: 30px;
+  }
+
+  .skills-logos-section {
+    gap: 15px;
+  }
+
+  .skills-logos-label {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .skills-logos-track {
+    gap: 30px;
+  }
+
+  .skills-logo-item {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-logos-container {
+    padding: 30px 15px 20px;
+    gap: 25px;
+  }
+
+  .skills-logos-section {
+    gap: 12px;
+  }
+
+  .skills-logos-label {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .skills-logos-track {
+    gap: 20px;
+  }
+
+  .skills-logo-item {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+
