@@ -35,7 +35,7 @@ const Resume = () => {
         <div className="resume-content">
           <h2 className="section-title">Resume</h2>
           <a 
-            href="/Turaka_Arunkumar_Resume.pdf" 
+            href="/ArunKumar_Turaka_Resume.pdf" 
             className="resume-button"
             download
             target="_blank"

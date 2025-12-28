@@ -126,8 +126,8 @@ const ContactPage = () => {
                 <a href="mailto:turakarunkumar@gmail.com" className="footer-email">
                   turakarunkumar@gmail.com
                 </a>
-                <a href="#resume" className="footer-resume">
-                  💬 Turaka_Arunkumar_Resume.pdf
+                <a href="/ArunKumar_Turaka_Resume.pdf" className="footer-resume" download target="_blank" rel="noopener noreferrer">
+                  💬 ArunKumar_Turaka_Resume.pdf
                 </a>
               </div>
             </div>
